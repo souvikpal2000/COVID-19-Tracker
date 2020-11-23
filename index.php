@@ -26,7 +26,7 @@
 			<h1>Covid 19 Tracker</h1>
 			<h5 class="text-muted">A Project to keep track of all the COVID-19 cases around the world.</h5>
 		</div>
-		<div class="container m-5">
+		<div class="container col-12 col-sm-12 pb-3">
  			 <div class="row text-center">
     			<div class="col-4 text-warning">
       				<h5>Confirmed</h5>
