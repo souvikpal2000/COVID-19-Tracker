@@ -1,3 +1,11 @@
 body{
 	font-family: 'Baloo Tamma 2', cursive;
 }
+input[type=search] { 	
+	width: 800px;
+	border-radius: 25px;
+	text-indent: 20px;
+	outline: none;
+	display: block;
+	margin: 0 auto;
+}

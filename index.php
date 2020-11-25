@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<div class="container-fluid bg-light p-5 text-center my-3">
-			<h1>Covid 19 Tracker</h1>
+			<h1>COVID-19 TRACKER</h1>
 			<h5 class="text-muted">A Project to keep track of all the COVID-19 cases around the world.</h5>
 		</div>
 		<div class="container col-12 col-sm-12 pb-3">
@@ -47,6 +47,9 @@
       				?>
       			</div>
   			</div>
+  		</div>
+  		<div class="container-fluid col-12 col-sm-12 pb-3">
+  			<input type="search" id="myInput" placeholder="Search" onkeyup="searchCountry()">
   		</div>
 		<div class="container-fluid">
 			<table class="table">
@@ -86,6 +89,32 @@
 				</tbody>
 			</table>
 		</div>
+
+		<script>
+			function searchCountry()
+			{
+				let filter = document.getElementById('myInput').value.toUpperCase();
+				let table = document.querySelector('tbody');
+				let tr = table.getElementsByTagName('tr');
+				for(var i=0; i<tr.length; i++)
+				{
+					let country = tr[i].getElementsByTagName('th')[0];
+					if(country)
+					{
+						let textValue = country.textContent || country.innerHTML;
+						if(textValue.toUpperCase().indexOf(filter) > -1)
+						{
+							tr[i].style.display = "";
+						}
+						else
+						{
+							tr[i].style.display = "none";
+						}
+					}
+				}
+			}
+		</script>
+		
 		<footer class="footer mt-auto py-3 bg-light">
   			<div class="container text-center">
     			<span class="text-muted">Copyright &copy;2020, Created by Souvik Pal</span>
